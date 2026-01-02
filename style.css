@@ -1,0 +1,65 @@
+body {
+  font-family: "Times New Roman", serif;
+  background-color: #0a0a0a; /* hitam gelap untuk kontras neon */
+  margin: 0;
+  padding: 40px;
+  color: #fff; /* default putih untuk teks */
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00f; /* neon biru glow */
+  text-align: center;
+}
+
+h1 {
+  color: #00f; /* neon biru untuk tajuk */
+  text-shadow: 0 0 10px #00f;
+}
+
+label {
+  color: #00f;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff; /* nombor putih */
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  box-shadow: 0 0 10px #00f inset;
+}
+
+button {
+  background-color: #00f;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Times New Roman", serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px #00f;
+}
+
+button:hover {
+  background-color: #0099ff;
+  box-shadow: 0 0 20px #0099ff;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 0 10px #00f;
+}

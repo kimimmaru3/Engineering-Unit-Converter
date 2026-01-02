@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Engineering Unit Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Engineering Unit Converter</h1>
+
+    <!-- Pilih kategori -->
+    <label for="category">Category:</label>
+    <select id="category" onchange="loadUnits()">
+      <option value="length">Length</option>
+      <option value="mass">Mass</option>
+      <option value="temperature">Temperature</option>
+    </select>
+
+    <!-- Input nilai -->
+    <label for="inputValue">Value:</label>
+    <input type="number" id="inputValue" placeholder="Enter value">
+
+    <!-- Pilih unit asal -->
+    <label for="fromUnit">From:</label>
+    <select id="fromUnit"></select>
+
+    <!-- Pilih unit target -->
+    <label for="toUnit">To:</label>
+    <select id="toUnit"></select>
+
+    <!-- Butang convert -->
+    <button onclick="convert()">Convert</button>
+
+    <!-- Hasil -->
+    <h2 id="result"></h2>
+
+    <!-- History -->
+    <div class="history">
+      <h3>Conversion History</h3>
+      <ul id="historyList"></ul>
+      <button onclick="clearHistory()">Clear History</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
