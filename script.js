@@ -1,54 +1,56 @@
-// --- Konfigurasi unit ---
+document.addEventListener("DOMContentLoaded", loadUnits);
+
 const UNIT_CONFIG = {
   length: {
     base: "meter",
     units: {
-      meter:      { label: "meter",      factorToBase: 1 },
-      kilometer:  { label: "kilometer",  factorToBase: 1000 },
+      meter: { label: "meter", factorToBase: 1 },
+      kilometer: { label: "kilometer", factorToBase: 1000 },
       centimeter: { label: "centimeter", factorToBase: 0.01 },
       millimeter: { label: "millimeter", factorToBase: 0.001 },
-      inch:       { label: "inch",       factorToBase: 0.0254 },
-      foot:       { label: "foot",       factorToBase: 0.3048 },
-      mile:       { label: "mile",       factorToBase: 1609.344 }
+      inch: { label: "inch", factorToBase: 0.0254 },
+      foot: { label: "foot", factorToBase: 0.3048 },
+      mile: { label: "mile", factorToBase: 1609.344 }
     }
   },
   mass: {
     base: "kilogram",
     units: {
       kilogram: { label: "kilogram", factorToBase: 1 },
-      gram:     { label: "gram",     factorToBase: 0.001 },
-      milligram:{ label: "milligram",factorToBase: 0.000001 },
-      pound:    { label: "pound",    factorToBase: 0.45359237 },
-      ounce:    { label: "ounce",    factorToBase: 0.028349523125 },
-      stone:    { label: "stone",    factorToBase: 6.35029318 }
+      gram: { label: "gram", factorToBase: 0.001 },
+      milligram: { label: "milligram", factorToBase: 0.000001 },
+      pound: { label: "pound", factorToBase: 0.45359237 },
+      ounce: { label: "ounce", factorToBase: 0.028349523125 },
+      stone: { label: "stone", factorToBase: 6.35029318 }
     }
   },
   temperature: {
     base: "kelvin",
     units: {
-      kelvin:     { label: "kelvin",
-        toBase: (v) => v,
-        fromBase: (K) => K
+      kelvin: {
+        label: "kelvin",
+        toBase: v => v,
+        fromBase: K => K
       },
-      celsius:    { label: "celsius",
-        toBase: (v) => v + 273.15,
-        fromBase: (K) => K - 273.15
+      celsius: {
+        label: "celsius",
+        toBase: v => v + 273.15,
+        fromBase: K => K - 273.15
       },
-      fahrenheit: { label: "fahrenheit",
-        toBase: (v) => (v - 32) * 5/9 + 273.15,
-        fromBase: (K) => (K - 273.15) * 9/5 + 32
+      fahrenheit: {
+        label: "fahrenheit",
+        toBase: v => (v - 32) * 5/9 + 273.15,
+        fromBase: K => (K - 273.15) * 9/5 + 32
       }
     }
   }
 };
 
-// Format nombor
 function formatNumber(num) {
   const s = Number(num).toFixed(6);
   return s.replace(/\.?0+$/, "");
 }
 
-// Muat dropdown
 function loadUnits() {
   const category = document.getElementById("category").value;
   const fromUnit = document.getElementById("fromUnit");
@@ -74,11 +76,9 @@ function loadUnits() {
   });
 }
 
-// Konversi
 function convertValue(category, value, from, to) {
   const cfg = UNIT_CONFIG[category];
   if (!cfg) throw new Error("Kategori tidak dikenali: " + category);
-
   if (from === to) return value;
 
   if (category === "length" || category === "mass") {
@@ -131,9 +131,7 @@ function convert() {
   }
 }
 
+// Tambah fungsi clearHistory
 function clearHistory() {
   document.getElementById("historyList").innerHTML = "";
 }
-
-// ✅ Panggil sekali masa page load
-window.onload = loadUnits;
