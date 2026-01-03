@@ -50,6 +50,7 @@ button {
   font-family: "Times New Roman", serif;
   text-transform: uppercase;
   box-shadow: 0 0 15px #00f;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -57,9 +58,39 @@ button:hover {
   box-shadow: 0 0 20px #0099ff;
 }
 
+.clear-btn {
+  background-color: #f44336;
+  box-shadow: 0 0 15px #f44336;
+}
+
+.clear-btn:hover {
+  background-color: #d32f2f;
+  box-shadow: 0 0 20px #d32f2f;
+}
+
 #result {
   margin-top: 20px;
   font-size: 18px;
   color: #fff;
   text-shadow: 0 0 10px #00f;
+}
+
+.history {
+  margin-top: 25px;
+}
+
+#historyList {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-left: 0;
+}
+
+#historyList li {
+  background: #222;
+  margin-bottom: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 0 10px #00f inset;
 }
