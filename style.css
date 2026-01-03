@@ -34,7 +34,6 @@ input, select {
   border-radius: 6px;
   background-color: #222;
   color: #fff;
-  font-family: "Times New Roman", serif;
   font-size: 16px;
   box-shadow: 0 0 10px #00f inset;
 }
@@ -47,7 +46,6 @@ button {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  font-family: "Times New Roman", serif;
   text-transform: uppercase;
   box-shadow: 0 0 15px #00f;
   margin-top: 10px;
