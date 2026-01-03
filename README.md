@@ -8,7 +8,7 @@ This project supports multiple categories including **Length, Mass, Temperature,
 ## 🎯 Objectives
 - Provide a beginner‑friendly engineering unit converter.
 - Demonstrate config‑driven JavaScript design.
-- Showcase neon‑style UI with dark theme for presentation.
+- Showcase neon‑style UI with dark theme for the website.
 - Make the project accessible for teachers and students.
 
 ---
@@ -69,6 +69,7 @@ Result: 1 hour = 60 minute
 ---
 
 
-
 ## 👨‍💻 Author
-Created by B132510196 Azfar (kimimmaru3)
+Muhammad Azfar Nuraiman  (B132510196)
+SRITHARAN A/L SARAVANAN (B132510187)
+MOHAMAD AIMAN SAIFULLAH BIN MOHD AZMI (B132510207)
