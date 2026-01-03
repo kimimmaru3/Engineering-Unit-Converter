@@ -117,4 +117,23 @@ function convert() {
   }
 
   try {
-    const result = convertValue(category
+    const result = convertValue(category, value, from, to);
+    const labelFrom = UNIT_CONFIG[category].units[from].label;
+    const labelTo = UNIT_CONFIG[category].units[to].label;
+    const output = `${formatNumber(value)} ${labelFrom} = ${formatNumber(result)} ${labelTo}`;
+    resultEl.innerText = output;
+
+    const li = document.createElement("li");
+    li.textContent = output;
+    historyList.appendChild(li);
+  } catch (err) {
+    resultEl.innerText = "Ralat: " + err.message;
+  }
+}
+
+function clearHistory() {
+  document.getElementById("historyList").innerHTML = "";
+}
+
+// ✅ Panggil sekali masa page load
+window.onload = loadUnits;
